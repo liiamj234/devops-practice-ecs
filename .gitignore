@@ -1,0 +1,3 @@
+
+# Terraform local cache (never commit)
+infra/**/.terraform/
