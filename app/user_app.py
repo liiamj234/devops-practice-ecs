@@ -3,15 +3,15 @@ from fastapi import APIRouter
 router = APIRouter()
 
 # ============================================================
-# YOUR TUTORIAL CODE GOES IN THIS FILE.
+# PUT YOUR PYTHON TUTORIAL / APP ROUTES BELOW THIS LINE
 # ============================================================
 # Anything in this router becomes available under /app/*
 # because main.py mounts it with prefix="/app".
 #
-# Examples (once you add routes):
+# Examples:
 #   GET /app/portfolio
+#   GET /app/version
 #   GET /app/items
-#   GET /app/users
 #
 # IMPORTANT:
 # - Do NOT define /health here.
@@ -28,6 +28,12 @@ def portfolio_placeholder():
             {"name": "DevOps Practice ECS", "status": "in progress"}
         ]
     }
+
+@router.get("/version")
+def version():
+    # This endpoint is for deployment verification.
+    # Change the string when you do new reps.
+    return {"version": "ops-rep-01"}
 
 # Example tutorial pattern:
 # @router.get("/items")
